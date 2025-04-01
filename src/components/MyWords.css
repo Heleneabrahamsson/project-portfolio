@@ -3,6 +3,10 @@
 	padding-top: 1px;
 }
 
+.article-container {
+	margin-left: 24px;
+}
+
 .MyWords-heading {
 	color: #FFF;
 	text-align: center;
@@ -11,18 +15,25 @@
 	font-weight: 700;
 	margin-top: 128px;
 	margin-bottom: 128px;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: normal;
+	overflow-wrap: break-word;
+	word-break: break-word;
 }
 
-
+/* Images */
 .article-image {
+	box-sizing: border-box;
 	height: 200px;
-	width: 100%;
+	width: 327px;
 	display: block;
-	margin-bottom: 64px;
-	padding: 0 24px;
+	margin: 0 24px 64px 0;
 	border-radius: 12px;
 }
 
+/* Texts */
 .article-heading {
 	color: #FFF;
 	font-family: Poppins;
@@ -30,6 +41,8 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+	margin-bottom: -16px;
+	margin-left: 12px;
 }
 
 time {
@@ -40,34 +53,38 @@ time {
 	border-radius: 4px;
 	border: 1px solid #FFF;
 	padding: 2px 32px;
-	margin-left: 24px;
+	margin-left: 8px;
 }
-
 
 .article-intro {
 	color: #FFF;
 	font-family: Poppins;
 	font-size: 18px;
 	font-weight: 400;
-	padding: 24px;
+	padding: 24px 24px;
+	width: 327px;
 }
 
 .read-article-button {
 	background-color: white;
 	color: black;
 	font-size: 18px;
-
+	margin-left: 6px;
 }
 
-/* Responsive design*/
 
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1366px) {
 
-@media (min-width: 768px) and (max-width: 1023px) {
+	.MyWords-heading {
+		margin-bottom: 128px;
+		margin-top: 128px;
+	}
+
 	.article-container {
 		display: flex;
 		flex-direction: row;
 		margin-right: 24px;
-		;
 	}
 
 	.article-image {
@@ -82,37 +99,43 @@ time {
 		margin-left: 16px;
 		margin-bottom: 16px;
 		padding: 0;
+		align-self: stretch;
+		margin-right: 24px;
+		font-size: 18px;
+		width: 464px;
 	}
 
 	.article-heading {
 		text-align: left;
 		margin-bottom: 16px;
+		margin-top: 16px;
 		margin-left: 16px;
 		padding: 0;
-		;
 	}
 }
 
-@media (min-width: 1024px) {
+/* Desktop*/
+@media (min-width: 1367px) {
 	.article-container {
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
-		margin-right: 24px;
+		margin-right: 128px;
+		margin-left: 128px;
 	}
 
 	.article-image {
 		width: 479px;
 		height: 311px;
-		margin-left: 128px;
+		margin-left: 64px;
+		margin-right: 64px;
 		margin-bottom: 64px;
-		margin-right: 125px;
 	}
 
 	.article-text {
 		flex: 1;
 		text-align: left;
-		margin-right: 128px;
+		margin-right: 64px;
 	}
 
 	.article-heading {
@@ -120,16 +143,21 @@ time {
 		margin-bottom: 16px;
 		padding: 0;
 		margin-top: 16px;
+		margin-left: -8px;
 	}
 
 	.article-intro {
 		text-align: left;
 		margin-bottom: 16px;
 		padding: 0;
+		width: 580px;
 	}
 
 	time {
 		margin-left: 0;
+	}
 
+	.read-article-button {
+		margin-left: -12px;
 	}
 }

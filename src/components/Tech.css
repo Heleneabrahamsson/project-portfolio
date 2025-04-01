@@ -26,11 +26,12 @@
 	font-weight: 400;
 	line-height: normal;
 	padding: 16px;
+	margin-bottom: 64px;
 }
 
 /* Responsive design*/
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1366px) {
 	.tech-heading {
 		margin-top: 128px;
 	}
@@ -52,11 +53,16 @@
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1367px) {
 	.tech-skills {
 		max-width: 782px;
 		text-align: center;
 		margin-top: 16px;
 		margin-bottom: 128px;
+	}
+
+	.tech-heading {
+		margin-top: 128px;
+		margin-bottom: 16px;
 	}
 }

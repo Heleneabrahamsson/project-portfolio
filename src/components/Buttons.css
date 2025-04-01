@@ -25,3 +25,9 @@
 	height: 20px;
 	margin-right: 8px;
 }
+
+@media (max-width: 767px) {
+	.button-container {
+		margin-left: -16px;
+	}
+}

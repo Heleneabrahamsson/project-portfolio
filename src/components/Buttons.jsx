@@ -8,7 +8,7 @@ export const Buttons = ({ buttons }) => {
 	return (
 		<div className="button-container">
 			{buttons.map((button, index) => {
-				const isLiveDemo = button.text === "Live Demo"; // Check if this is the "Live Demo" button
+				const isLiveDemo = button.text === "Live Demo";
 				return (
 					<button
 						key={index}

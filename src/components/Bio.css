@@ -6,7 +6,7 @@
 	gap: 16px;
 	align-self: stretch;
 	background-color: #000000;
-	margin-top: -64px;
+	margin-top: -1px;
 }
 
 .bio-heading {
@@ -16,7 +16,7 @@
 	font-size: 60px;
 	font-weight: 700;
 	margin: 0;
-
+	margin-top: 192px;
 }
 
 .bio-text {
@@ -26,23 +26,27 @@
 	font-weight: 400;
 	align-self: stretch;
 	padding: 16px;
-
 }
 
-/* Responsive design*/
-
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Responsive design Tablet */
+@media (min-width: 768px) and (max-width: 1366px) {
 	.bio-text {
 		text-align: center;
 		padding: 24px;
+		margin: 0 24px 128px;
+		align-self: stretch;
+	}
+
+	.bio-heading {
+		margin-top: 64px;
 	}
 }
 
-@media (min-width: 1024px) {
+/* Desktop */
+@media (min-width: 1367px) {
 	.bio-heading {
 		font-size: 80px;
 		margin-top: 64px;
-
 	}
 
 	.bio-text {
@@ -51,10 +55,19 @@
 		text-wrap: pretty;
 		display: block;
 		margin: 0 auto;
-		margin-bottom: 128;
-		text-align: center;
 		margin-bottom: 128px;
-
+		text-align: center;
 	}
+}
 
+
+.bio-section+.image-container {
+	margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+	.bio-section+.image-container {
+		margin-top: 64px;
+		margin-bottom: 64px;
+	}
 }

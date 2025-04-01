@@ -3,6 +3,7 @@
 	font-family: Poppins;
 	font-size: 30px;
 	font-weight: 500;
+	margin-bottom: -16px;
 }
 
 p {
@@ -11,6 +12,7 @@ p {
 	font-size: 16px;
 	font-weight: 400;
 	padding: 16px;
+	margin-left: -16px;
 }
 
 .tags-container {
@@ -18,6 +20,9 @@ p {
 	flex-wrap: wrap;
 	gap: 4px;
 	padding: 0 16px;
+	justify-content: space-between;
+	margin-left: -16px;
+	margin-right: -16px;
 }
 
 .tag {
@@ -36,23 +41,22 @@ p {
 	justify-content: center;
 	padding: 0 16px;
 	margin-top: 64px;
-
+	margin-left: -16px;
+	margin-right: -16px;
 }
 
 .project-card .live-demo-button .icon {
 	filter: invert(1);
-
 }
 
-
-/* Responsive design*/
-
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1366px) {
 
 	.project-image {
 		height: 479px;
 		width: 100%;
 		margin: 24px;
+		align-self: stretch;
 	}
 
 	.tag {
@@ -66,83 +70,99 @@ p {
 	.tags-container {
 		margin: 24px;
 		margin-bottom: 16px;
+		margin-right: 116px;
+		margin-left: 1px;
 	}
 
 	.project-title {
 		margin-top: 24px;
 		display: flex;
 		text-align: left;
-		margin-left: 32px;
+		margin-left: 24px;
 		padding: 0;
 	}
 
 	p {
 		margin-top: 6px;
-		margin-left: 24px;
+		margin-left: 10px;
+		margin-right: 116px;
 	}
 }
 
-@media (min-width: 1024px) {
+/* Desktop*/
+@media (min-width: 1367px) {
+
 	.project-card {
 		display: grid;
-		grid-template-columns: 40% 1fr;
-		gap: 16px;
-		align-items: start;
-		width: 100%;
-		margin-bottom: 128px;
+		width: 1440px;
+		margin: 0 auto 128px auto;
+		box-sizing: border-box;
+		align-items: center;
+		grid-template-rows: 479px;
+	}
+
+	.project-card:nth-of-type(odd) {
+		grid-template-columns: 479px 580px;
+		column-gap: 125px;
 	}
 
 	.project-card:nth-of-type(even) {
-		grid-template-columns: 1fr 40%;
+		grid-template-columns: 580px 479px;
+		column-gap: 125px;
 	}
 
 	.project-image-wrapper {
-		grid-column: 1;
+		width: 479px;
+		height: 479px;
+		overflow: hidden;
+		border-radius: 12px !important;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		grid-row: 1;
-		margin: 0;
+		position: relative;
+		top: -30px;
 	}
 
 	.project-image {
-		width: 479px;
-		height: 479px;
+		width: 479px !important;
+		height: 479px !important;
+		object-fit: cover;
+		border-radius: 12px !important;
+		box-sizing: border-box;
+		overflow: hidden;
 	}
 
-	.project-card:nth-of-type(even) .project-image-wrapper {
-		grid-column: 2;
-	}
-
-	/* Margins for images depending on odd/even card */
-	.project-card:nth-of-type(odd) .project-image-wrapper {
-		margin-left: 128px;
-	}
-
-	.project-card:nth-of-type(even) .project-image-wrapper {
-		margin-right: 128px;
-	}
-
-	.project-content {
-		/* Place text in appropriate column */
+	.project-card:nth-of-type(odd) .project-content {
 		grid-column: 2;
 		grid-row: 1;
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-
-		/* Add 125px margin on left and right sides */
-		margin: 0 125px;
 	}
 
 	.project-card:nth-of-type(even) .project-content {
 		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.project-card:nth-of-type(even) .project-image-wrapper {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	.project-content {
+		width: 580px;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		grid-row: 1;
 	}
 
 	.project-title {
 		font-size: 24px;
 		font-weight: 600;
-		margin: 0;
+		margin: 16px 0 0 20px;
 		text-align: left;
-		margin-left: 20px;
-		margin-top: 16px;
 	}
 
 	p {
@@ -150,12 +170,25 @@ p {
 		line-height: 1.5;
 	}
 
-	.tags-container {
+	.tags-container,
+	.buttons-container {
 		margin: 0;
 	}
+}
 
-	.buttons-container {
-		display: flex;
-		gap: 8px;
+/* iPad Pro override*/
+@media (min-width: 1367px) and (max-width: 1600px) {
+	.project-card {
+		transform: scale(0.95);
+		transform-origin: top center;
+	}
+
+	.project-image {
+		align-self: stretch;
+		height: 479px;
+		object-fit: cover;
+		border-radius: 12px !important;
+		box-sizing: border-box;
+		overflow: hidden;
 	}
 }

@@ -11,6 +11,8 @@
 	font-family: Poppins;
 	font-size: 60px;
 	font-weight: 700;
+	margin-top: 64px;
+	margin-bottom: 16px;
 }
 
 .profile-picture {
@@ -45,12 +47,20 @@
 
 /* Responsive design*/
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1366px) {
+	.icons-container {
+		margin-bottom: 128px;
+	}
+}
+
+@media (min-width: 1367px) {
 	.info p {
 		text-align: center;
 		font-weight: 600;
 		font-size: 30px;
+	}
 
-
+	.icons-container {
+		margin-bottom: 128px;
 	}
 }

@@ -1,19 +1,48 @@
+.featured-projects {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	margin-top: 64px;
+}
+
+.featured-projects-box {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
 h2 {
 	color: #000;
 	text-align: center;
-	font-family: Poppins;
+	font-family: "Poppins", sans-serif;
 	font-size: 60px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 80px;
+	margin: 0;
+	white-space: normal;
+	overflow-wrap: break-word;
+	word-break: break-word;
 }
 
-/* Responsive design*/
-
-
-@media (min-width: 1024px) {
-	h2 {
+@media (min-width: 768px) and (max-width: 1366px) {
+	.featured-projects {
 		margin-top: 128px;
+	}
+}
+
+/* vertical spacing on desktop*/
+@media (min-width: 1367px) {
+	.featured-projects {
+		margin-top: 128px;
+		margin-bottom: 0;
+	}
+
+	h2 {
 		margin-bottom: 128px;
 	}
 }

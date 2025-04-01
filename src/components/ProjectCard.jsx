@@ -21,7 +21,7 @@ export const ProjectCard = ({ title, image, description, tags, netlifyUrl, githu
 		},
 	];
 
-	// Map image filename to the imported image variable
+	// Map image filename 
 	let displayedImage;
 	if (image === "img-one.png") displayedImage = imgLeft;
 	if (image === "img-two.png") displayedImage = imgMiddle;
@@ -36,7 +36,7 @@ export const ProjectCard = ({ title, image, description, tags, netlifyUrl, githu
 					className="project-image"
 				/>
 			</div>
-			{/* New wrapper for all textual and interactive elements */}
+			{/* wrapper for all textual and interactive elements */}
 			<div className="project-content">
 				<div className="tags-container">
 					{tags.map((tag, index) => (
